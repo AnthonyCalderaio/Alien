@@ -1,0 +1,10 @@
+Open Xcode: 
+cd ~/ && cd Desktop/Manifest2/Alien/ios && open Alien.xcworkspace
+or
+cd ~/ && cd Desktop/Manifest2/Alien/ios && open Alien.xcodeproj
+
+---Pods uninstall
+$: sudo gem install cocoapods-clean
+$: pod deintegrate
+$: pod clean
+$: pod install
