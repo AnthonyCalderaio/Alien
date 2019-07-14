@@ -8,11 +8,11 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, Button} from 'react-native';
-import Sound from 'react-native-sound'
+// import Sound from 'react-native-sound'
 
 
-import { BleManager } from 'react-native-ble-plx';
-import {RNCamera} from 'react-native-camera';
+// import { BleManager } from 'react-native-ble-plx';
+// import {RNCamera} from 'react-native-camera';
 
 
 
@@ -79,7 +79,7 @@ import {RNCamera} from 'react-native-camera';
 // whoosh.release();
 
 
-const manager = new BleManager()
+// const manager = new BleManager()
 export default class App extends React.Component{
   
 
@@ -106,23 +106,23 @@ export default class App extends React.Component{
   }
   
 //////BLUE TOOTH
-scanAndConnect() {
-  manager.startDeviceScan(null,
-                               null, (error, device) => {
-    //this.info("Scanning...")
-    //alert((JSON.Stringify(device)))
+// scanAndConnect() {
+//   manager.startDeviceScan(null,
+//                                null, (error, device) => {
+//     //this.info("Scanning...")
+//     //alert((JSON.Stringify(device)))
 
-    if (error) {
-      this.error(error.message)
-      return
-    }
-    if (device.name === 'Mobile Phone') {
-      alert("Found your thing")
-    }
+//     if (error) {
+//       this.error(error.message)
+//       return
+//     }
+//     if (device.name === 'Mobile Phone') {
+//       alert("Found your thing")
+//     }
 
    
-  });
-}
+//   });
+// }
 /////
 
 ///////BLUE TOOTH
@@ -132,19 +132,19 @@ scanAndConnect() {
 
 
 
-  playSound(){
+  // playSound(){
 
-    // var sound = new Sound('WaitingInShip.m4a', Sound.MAIN_BUNDLE, (error) => {
-    //   if (error) {
-    //     console.log('failed to load the sound', error);
-    //     return;
-    //   }})
-    //let sound = loadSound('/Users/anthonycalderaio/Desktop/Manifest2/Alien/WaitingInShip.aif')
-  //alert("sound playing")
-    //sound.play();
-    // whoosh.play();
-    //alert("Hello")
-  }
+  //   // var sound = new Sound('WaitingInShip.m4a', Sound.MAIN_BUNDLE, (error) => {
+  //   //   if (error) {
+  //   //     console.log('failed to load the sound', error);
+  //   //     return;
+  //   //   }})
+  //   //let sound = loadSound('/Users/anthonycalderaio/Desktop/Manifest2/Alien/WaitingInShip.aif')
+  // //alert("sound playing")
+  //   //sound.play();
+  //   // whoosh.play();
+  //   //alert("Hello")
+  // }
 
 
   // <Text style={styles.welcome}>Alien</Text>
@@ -161,7 +161,7 @@ scanAndConnect() {
       <View style={styles.container}>
       
         
-        <RNCamera style={{height: 220, width: 220}}
+        {/* <RNCamera style={{height: 220, width: 220}}
                         ref={cam => this.camera=cam}
                         aspect={RNCamera.constants.Aspect.fill}
                         type={RNCamera.constants.Type.front}
@@ -169,7 +169,8 @@ scanAndConnect() {
 
                         captureMode = {RNCamera.constants.CaptureMode.picture}
                         captureTarget={RNCamera.constants.CaptureTarget.disk}
-                        ></RNCamera>
+                        ></RNCamera> */}
+                        <Text style={{color:'white'}}>Hi</Text>
         
       </View>
     );
